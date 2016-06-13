@@ -1,4 +1,4 @@
-PROGRAMS = argc argv toseconds forever noop write-file
+PROGRAMS = argc argv confirm toseconds forever noop write-file
 PREFIX = /usr
 
 build: $(PROGRAMS)
