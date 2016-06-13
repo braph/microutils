@@ -28,12 +28,11 @@ int main(int argc, char **argv)
       switch(fork()) {
          case -1: 
             perror("fork");
-            exit(EXIT_FAILURE);
             break;
 
          case 0:
-            if (execvp(argv[1], &argv[1]))
-               perror("execvp");
+            execvp(argv[1], &argv[1]);
+            perror("execvp");
             break;
 
          default:                     
