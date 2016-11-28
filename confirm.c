@@ -33,15 +33,17 @@ int read_yes_no()
 
    for (int c = getchar() ;; c = getchar())
       if (c == 'y' || c == 'Y') {
-         tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-         putchar('\n');
-         return 1;
+         c = 1;
+         break;
       }
       else if (c == 'n' || c == 'N') {
-         tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-         putchar('\n');
-         return 0;
+         c = 0;
+         break;
       }
+
+   tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+   putchar('\n');
+   return c;
 }
 
 int main(int argc, char **argv)
