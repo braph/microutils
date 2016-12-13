@@ -31,7 +31,8 @@ int read_yes_no()
    newt.c_lflag &= ~(ICANON | ECHO);
    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 
-   for (int c = getchar() ;; c = getchar())
+   int c;
+   for (c = getchar() ;; c = getchar())
       if (c == 'y' || c == 'Y') {
          c = 1;
          break;
