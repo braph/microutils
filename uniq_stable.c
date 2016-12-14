@@ -60,8 +60,8 @@ int main(int argc, char **argv)
          fputs(e.key, stdout);
    }
 
-   for (int i = 0; i < nlines; ++i)
-      free(lines[i]);
+   while (nlines--)
+      free(lines[nlines]);
    free(lines);
    hdestroy();
 
