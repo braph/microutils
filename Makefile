@@ -7,7 +7,7 @@ install:
 	install -m 0755 $(PROGRAMS) $(PREFIX)/bin
 
 $(PROGRAMS):
-	gcc $@.c -o $@
+	gcc -O2 $@.c -o $@
 
 clean:
 	rm -f $(PROGRAMS)
