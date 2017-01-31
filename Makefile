@@ -1,4 +1,4 @@
-PROGRAMS = argc argv confirm toseconds forever noop respawn write-file rmempty uniq_stable
+PROGRAMS = argc argv confirm toseconds forever noop respawn write-file rmempty uniq_stable ret
 PREFIX = /usr
 
 build: $(PROGRAMS)
